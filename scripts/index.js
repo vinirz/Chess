@@ -37,18 +37,20 @@ const infos = [
     }
   ]
 
-const progressBar = document.querySelector('.bar2')
-const progressValue = document.querySelector('.progressValue')
+// const progressBar = document.querySelector('.bar2')
+// const progressValue = document.querySelector('.progressValue')
 
 document.getElementById('mv').addEventListener('load', e => {
   document.querySelector('body').style.overflowY = "scroll"
-  document.querySelector('#splash').style.opacity = "0%"
+  // document.querySelector('#splash').style.opacity = "0%"
+
+  console.log(document.getElementById('mv').toDataURL())
 })
 
-document.getElementById('mv').addEventListener('progress', e => {
-  progressBar.style.width = `${((e.detail.totalProgress).toFixed(2) * 100)}%`
-  progressValue.innerText = `${((e.detail.totalProgress).toFixed(2) * 100)}%`
-})
+// document.getElementById('mv').addEventListener('progress', e => {
+//   progressBar.style.width = `${((e.detail.totalProgress).toFixed(2) * 100)}%`
+//   progressValue.innerText = `${((e.detail.totalProgress).toFixed(2) * 100)}%`
+// })
   
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('6').style.backgroundColor = '#0061A6'
