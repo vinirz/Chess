@@ -41,7 +41,7 @@ const infos = [
 // const progressValue = document.querySelector('.progressValue')
 
 document.getElementById('mv').addEventListener('load', e => {
-  document.querySelector('body').style.overflowY = "scroll"
+  // document.querySelector('body').style.overflowY = "scroll"
   // document.querySelector('#splash').style.opacity = "0%"
 
   console.log(document.getElementById('mv').toDataURL())
