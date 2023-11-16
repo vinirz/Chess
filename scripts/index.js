@@ -36,6 +36,19 @@ const infos = [
       "description": "Os 'peões' movem-se para frente, mas capturam em diagonal. Seu movimento inicial permite uma escolha entre avançar um ou dois quadrados. Os peões são fundamentais na ocupação do centro do tabuleiro e na criação de estruturas defensivas. Além disso, a promoção de um peão pode levar a mudanças drásticas na dinâmica da partida."
     }
   ]
+
+const progressBar = document.querySelector('.bar2')
+const progressValue = document.querySelector('.progressValue')
+
+document.getElementById('mv').addEventListener('load', e => {
+  document.querySelector('body').style.overflowY = "scroll"
+  document.querySelector('#splash').style.opacity = "0%"
+})
+
+document.getElementById('mv').addEventListener('progress', e => {
+  progressBar.style.width = `${((e.detail.totalProgress).toFixed(2) * 100)}%`
+  progressValue.innerText = `${((e.detail.totalProgress).toFixed(2) * 100)}%`
+})
   
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('6').style.backgroundColor = '#0061A6'

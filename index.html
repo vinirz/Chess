@@ -8,7 +8,20 @@
     <title>Xadrez para todos</title>
 </head>
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+
 <body>
+    <div id="splash">
+        <span>
+            <img src="assets/images/logo.png">
+            <h1>Xadrez</h1>
+            <p>para todos</p>
+        </span>
+
+        <div class="progress">
+            <div class="bar1"><div class="bar2"></div></div>
+            <h3 class="progressValue">00%</h3>
+        </div>
+    </div>
 
     <nav>
         <ul>
@@ -34,13 +47,16 @@
         </div>
         <div class="light"></div>
         <model-viewer 
+            id="mv"
             src="assets/3d/chess.glb" 
             shadow-intensity="1"
-            camera-orbit="80deg 60deg 100%"
+            camera-orbit="65deg 60deg 100%"
             auto-rotate
             auto-rotate-delay="0"
             camera-controls
             disable-zoom
+            loading="eager"
+            poster="assets/3d/poster.png"
         />
     </section>
     
@@ -51,6 +67,7 @@
             shadow-intensity="1"
             camera-target="auto auto 4m"
             camera-orbit="0deg calc(env(window-scroll-y) * 5rad) 105%"
+            loading="lazy"
         />
         <div class="aboutText">
             <span>
